@@ -15,6 +15,8 @@ var currenthour= moment().hour()
 var currentDay =$("#currentDay")  // document.querySelector("#currentDay")
 console.log(currenthour)
 
+var local =[localStorage.getItem("local9"),localStorage.getItem("local10"),localStorage.getItem("local11"),localStorage.getItem("local12"),localStorage.getItem("local13"),localStorage.getItem("local14"),localStorage.getItem("local15"),localStorage.getItem("local16"),localStorage.getItem("local17")]
+
 var systemTime=moment().format("dddd, MMMM Do")
 currentDay.text(systemTime)   // currentDay.textContent=systemTime
 
@@ -34,6 +36,25 @@ function displayTimeBlockColors(){
             currentTextEl.addClass("future") 
          }
     }
+}
+
+function saveInput(){
+   localStorage.setItem("local9", $('#9').val())
+   localStorage.setItem("local10", $('#10').val())
+   localStorage.setItem("local11", $('#11').val())
+   localStorage.setItem("local12", $('#12').val())
+   localStorage.setItem("local13", $('#13').val())
+   localStorage.setItem("local14", $('#14').val())
+   localStorage.setItem("local15", $('#15').val())
+   localStorage.setItem("local16", $('#16').val())
+   localStorage.setItem("local17", $('#17').val())
+
+
+
+
+
+
+
 }
 
 displayTimeBlockColors()
